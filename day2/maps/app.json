@@ -1,20 +1,18 @@
 {
   "expo": {
     "name": "maps",
-    "description": "An empty new project",
+    "description": "This project is really great.",
     "slug": "maps",
     "privacy": "public",
-    "sdkVersion": "18.0.0",
+    "sdkVersion": "25.0.0",
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app.png",
-    "loading": {
-      "icon": "./assets/icons/loading.png",
-      "hideExponentText": false
-    },
-    "packagerOpts": {
-      "assetExts": ["ttf", "mp4"]
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true

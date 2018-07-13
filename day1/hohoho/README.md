@@ -360,7 +360,7 @@ add an `onPress` handler to send a _Ho Ho Ho!_ to any user we tap.
 
 ### Creating More Components - `App.js [Users]`
 
-Now, implement `fetch` inside of your `constructor`'s this.state to load up an array of real users rather than a list of static users.
+Now, implement `fetch` inside of your `constructor` to populate this.state with an array of real users rather than a list of static users.
 
 ```javascript
 .then((responseJson) => {
@@ -372,9 +372,9 @@ Now, implement `fetch` inside of your `constructor`'s this.state to load up an a
 });
 ```
 
-⚠️ **Note:** Use `this.setState` when you receive the results back from `fetch` and return an empty
-array (`ds.cloneWithRows([])`) for your `dataSource` in the `constructor`\'s this.state. This way, your
-initial state will be zero rows, but the new rows will be set once we fetch the users from the server.
+⚠️ **Note:** Set your initial state to include a `dataSource` cloned with an empty array (`ds.cloneWithRows([])`).
+Then, when you receive the results back from `fetch`, use `this.setState` to provide a new `dataSource` clone using the results. This way, your initial state will be zero rows, but the new rows will be set once we fetch the users from
+the server.
 
 We will also need to modify your `render` function to handle our response correctly, since
 `responseJson` is now an array of _objects_. Change the `<Text>` component within each `renderRow` of
